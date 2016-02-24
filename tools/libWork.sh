@@ -27,6 +27,5 @@ rm -rf "$targetdir/lib/"
 
 # zipalign
 mv "$targetapk" "$targetapk.orig"
-cd "$toolsdir/bin"
-./zipalign -f -p 4 "$targetapk.orig" "$targetapk"
+zipalign -f -p 4 "$targetapk.orig" "$targetapk"
 rm "$targetapk.orig"
